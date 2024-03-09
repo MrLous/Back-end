@@ -4,15 +4,15 @@ const swaggerAutogen = require('swagger-autogen')({
     languagen: 'pt-BR',
 });
 
-const outputFile = './swagger_output.json';
-const endpoitsFiles = ['../index.js', '../src/routes.js'];
+let outputFile = './swagger_output.json';
+let endpoitsFiles = ['../index.js', '../src/routes.js'];
 
 //documentação swagger
 let doc = {
     info: {
         version: "1.0.0",
         title: "API desafio ttoss",
-        description: "Documentação APT ttoss."
+        description: "Documentação API ttoss."
     },
     servers: [
         {

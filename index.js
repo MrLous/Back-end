@@ -21,8 +21,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //documentação do swagger no ambiente de teste
 if(process.env.NODE_ENV !== 'test'){
     const swaggerFile = require('./swagger/swagger_output.json');
-    app.get('/', (req,res) => { /*#swagger.ignore = true */ res.redirect('/doc'); })
-    app.use("/doc",authDocProducao, swaggerUi.serve, swaggerUi.setup(swaggerFile, swaggerOptions));
+    app.get('/', (req, res) => { /* #swagger.ignore = true */ res.redirect('/doc'); });
+    app.use("/doc", authDocProducao, swaggerUi.serve, swaggerUi.setup(swaggerFile, swaggerOptions));
 }
 
 //rotas
